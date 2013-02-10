@@ -1,10 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
+  font:16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#444;
+  background-color:#fcfcfc;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,6 +16,7 @@ p, ul, ol, table, pre, dl {
 
 h1, h2, h3 {
   line-height:1.1;
+  font-weight: normal;
 }
 
 h1 {
@@ -47,7 +46,7 @@ a small {
 
 .wrapper {
   width:860px;
-  margin:0 auto;
+  /*margin:0 auto;*/
 }
 
 blockquote {
@@ -57,15 +56,35 @@ blockquote {
   font-style:italic;
 }
 
+code {
+  /* Should default to monospace */
+}
+
+code {
+  margin: 0 2px;
+  padding: 0px 5px;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  /*font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;*/
   color:#333;
   font-size:12px;
 }
 
+pre > code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
 pre {
   padding:8px 15px;
-  background: #f8f8f8;  
+  background: #fafafa;  
   border-radius:5px;
   border:1px solid #e5e5e5;
   overflow-x: auto;
@@ -96,7 +115,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:200px;
   float:left;
   position:fixed;
 }
@@ -160,7 +179,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:600px;
   float:right;
   padding-bottom:50px;
 }
@@ -177,7 +196,7 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:200px;
   float:left;
   position:fixed;
   bottom:50px;
