@@ -14,27 +14,27 @@ Why we use MVC is a relatively simple question to answer: We want portions of ou
 
 But that's already an over-simplification, and for the more pedantic among us, I've already provided enough fuel to ignite a flame-war.
 
-So let's skip the bullshit and code.
+So let's leave the academic bits to somebody else.
 
 ## Models
 
 A `model` is the foundational element of your collection. 
 
-What the fuck does that mean?
+Great, but what does that mean?
 
 Well, if you have some experience programming, you can think of it as an object class, or as the schema for a database table.
 
-For instance, if we were coding a page full of profiles, our foundational unit would a single profile.
+For instance, if you were creating a page full of profiles, our foundational unit would a single profile.
 
-To create a model in Bacbkbone, we `extend` the included `Backbone.Model` object.
+To create a model in Backbone, we `extend` the included `Backbone.Model` object.
 
-_TODO Why the fuck we do this_
+###### _TODO Why we extend(): tp inherit the correct prototype chain - examples?_
 
 {% highlight javascript %}
 var Profile = new Backbone.Model.extend({});
 {% endhighlight %}
 
-_TODO A Note on why we use `var` and `new`?_
+###### _TODO Why we use `var` and `new`? global scope and prototypes_
 
 Now careful, this Profile variable isn't an _instance_ of a profile, it's the class object itself.
 
@@ -46,4 +46,7 @@ var jims_profile = new Profile();
 
 To continue with the parallel to other aspects of programming, `jims_profile` is an instance of the our Profile class, or a row of data in our Profile Table.
 
-_Pedantism Note: Yes, I am using [snake_case](http://en.wikipedia.org/wiki/Snake_case) for instances of classes and [CamelCase](http://en.wikipedia.org/wiki/Camelcase) for the classes themselves._
+_pedantism note: Yes, I am using [snake_case](http://en.wikipedia.org/wiki/Snake_case) for instances of classes and [CamelCase](http://en.wikipedia.org/wiki/Camelcase) for the classes themselves._
+
+We can provide this instance with initial data by passing an object as the first parameter during initialization.
+
