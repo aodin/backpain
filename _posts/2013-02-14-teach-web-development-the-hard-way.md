@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Teach Web Development the Hard Way
-excerpt: Letting novice JavaScript programmers repeat your own mistakes might actually be a good, just help them so that they don't repeat their own.
+excerpt: Letting novice web programmers repeat the mistakes you've made might actually be a good, just help them so that they don't repeat their own.
 ---
 
 Teach Web Development the Hard Way
 ==================================
 
-{{ page.date | date: "%d %B %Y" }}
+_{{ page.date | date: "%d %B %Y" }}_
 
 If I had one word to describe the current state of web development it would be "cruel".
 
@@ -30,5 +30,4 @@ This isn't a call to throw the rookies overboard and watch silently while they s
 That is to say: as hard as it is to learn web development, teaching it should be harder.
 
 
-_Happy Hacking,_
-_aodin_
+_Happy Hacking_
