@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Teach Web Development the Hard Way
-excerpt: Letting novice web programmers repeat the mistakes you've made might actually be a good, just help them so that they don't repeat their own.
+excerpt: Letting novice web programmers repeat the mistakes you've made might be good for them, just help them not to repeat their own.
 ---
 
 Teach Web Development the Hard Way
