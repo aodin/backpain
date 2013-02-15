@@ -9,7 +9,7 @@ Teach Web Development the Hard Way
 
 {{ page.date | date: "%d %B %Y" }}
 
-If I had to use one word to describe the current state of web development it would be "cruel".
+If I had one word to describe the current state of web development it would be "cruel".
 
 I'm not suggesting that a robust web service has ever been easy to build. But the industry's recent shift to heavy client-side JavaScript applications and backed by an API, often REST, has made the learning curve a bit more precipitous. 
 
@@ -29,6 +29,6 @@ This isn't a call to throw the rookies overboard and watch silently while they s
 
 That is to say: as hard as it is to learn web development, teaching it should be harder.
 
-_Happy Hacking,_
 
+_Happy Hacking,_
 _aodin_
