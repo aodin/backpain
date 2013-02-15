@@ -114,6 +114,14 @@ img {
   max-width:100%;
 }
 
+section li h4 {
+  margin-bottom: 2px;
+}
+
+section li p {
+  margin-bottom: 4px;
+}
+
 header {
   width:200px;
   float:left;
