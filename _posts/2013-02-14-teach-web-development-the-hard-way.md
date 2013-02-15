@@ -7,13 +7,15 @@ excerpt: Letting novice JavaScript programmers repeat your own mistakes might ac
 Teach Web Development the Hard Way
 ==================================
 
-If I had to use one word to describe the current state of web development it would have to be "cruel".
+{{ page.date | date: "%d %B %Y" }}
+
+If I had to use one word to describe the current state of web development it would be "cruel".
 
 I'm not suggesting that a robust web service has ever been easy to build. But the industry's recent shift to heavy client-side JavaScript applications and backed by an API, often REST, has made the learning curve a bit more precipitous. 
 
 The biggest contributer to this increased complexity is the division of logic. Not only do features, such as validation, need to be duplicated between client and server (often in two different programming languages), but the successful execution of logic is now dependent on the quirks of a user's operating system, browser and a plethora of other configurable options. The only way for a programmer to guarantee successful execution of logic on the client-side is to test it, in every possible combination.
 
-(While client-side compatibility issues have long existed, especially with CSS, those were issues of appearance, not logic.) 
+_(While client-side compatibility issues have long existed, especially with CSS, those were issues of appearance, not logic.)_ 
 
 Of course, complexity alone isn't cruelty. And the open source community's response to this challenge is as strong as ever; projects have emerged across the entire software stack: new frameworks, new languages, new test suites.
 
@@ -27,5 +29,6 @@ This isn't a call to throw the rookies overboard and watch silently while they s
 
 That is to say: as hard as it is to learn web development, teaching it should be harder.
 
-Happy Hacking,
-aodin
+_Happy Hacking,_
+
+_aodin_
