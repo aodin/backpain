@@ -13,9 +13,11 @@ Try giving it a [Backbone.js](http://backbonejs.org/).
 
 This tutorial assumes a working knowledge of [HTML](https://developer.mozilla.org/en-US/docs/HTML), [CSS](https://developer.mozilla.org/en-US/docs/CSS), and [jQuery](http://jquery.com/). No [REST](http://en.wikipedia.org/wiki/Representational_state_transfer) backend is used. It is written in plain javascript instead of [CoffeeScript](http://coffeescript.org/) to reduce the prerequisites.
 
+Download a sandbox HTML file to get started: [TAR](https://github.com/aodin/backpain/tarball/master) or [ZIP](https://github.com/aodin/backpain/zipball/master)
+
+* [Events]({{ site.baseurl }}/restless/events.html)
 * [Models and Views]({{ site.baseurl }}/restless/models-and-views.html)
 * Collections
-* Events
 * Get and Set
 * Binding and Context
 * Routes and History
