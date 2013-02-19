@@ -8,6 +8,8 @@ excerpt: Getting Started with Backbone.js Models and Views
 Models and Views
 ================
 
+TODO roll our own pseudo-Model
+
 Introductions to Backbone often start with a short discussion of the [Model-View-Controller (MVC)](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigm _(Oh fuck, did I just use the word 'paradigm?')_.
 
 Why we use MVC is a relatively simple question to answer: We want portions of our code to be reusable, and separating how something _looks_ from how something _acts_ is a good place to start.

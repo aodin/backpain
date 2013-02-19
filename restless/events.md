@@ -45,8 +45,8 @@ var A = _.clone(Backbone.Events)
 With this new clone of Events, we can create some new methods, bind them to a trigger and then call that trigger:
 
 {% highlight javascript %}
-A.speak = function() { console.log('Hello!'); }
-A.on('speak', A.speak)
+function speak() { console.log('Hello!'); }
+A.on('speak', speak)
 A.trigger('speak')
 {% endhighlight %}
 
@@ -57,7 +57,7 @@ When this code is run in console, it should produce:
 The event name is arbitrary (but no whitespace!), as this code would produce the same result:
 
 {% highlight javascript %}
-A.on('talk', A.speak)
+A.on('talk', speak)
 A.trigger('talk')
 {% endhighlight %}
 
@@ -73,8 +73,8 @@ A.trigger('talk')
 Events can also take an arbitrary number of parameters:
 
 {% highlight javascript %}
-A.speak = function(msg) { console.log(msg); }
-A.on('speak', A.speak)
+function speak(msg) { console.log(msg); }
+A.on('speak', speak)
 A.trigger('speak', 'Hello Backbone Events!')
 {% endhighlight %}
 
@@ -84,8 +84,39 @@ Running the previous code will produce:
 
 The third parameter of the callback binding of `on` or `bind` is an optional context.
 
-Why is this important? Well, let's create two objects and give them both a function that will output the value of an attribute:
+Why is this important? Well, let's create two objects, `Speaker` and `Prompter` and give the `Speaker` a method that will output a value of an attribute when prompted:
 
+{% highlight javascript %}
+var Speaker = {count: 99, speak: function() { console.log('count:', this.count); } }
+Speaker = _.extend(Speaker, Backbone.Events)
+var Prompter = {}
+Prompter = _.extend(Prompter, Backbone.Events)
+Prompter.on('prompt', Speaker.speak)
+{% endhighlight %}
+
+Calling `Prompter.trigger('prompt')` will produce:
+
+    > count: undefined
+
+Whoops! When the `Speaker.speak` executes, it can't locate any value for `count` because `this` refers to the `Prompter`! Set a value for `Prompter.count` and see for yourself.
+
+How do we fix this? With context of course! We can specify the context as the final parameter of a callback. So instead of our previous line:
+
+    Prompter.on('prompt', Speaker.speak)
+
+We can write:
+
+    Prompter.on('prompt', Speaker.speak, Speaker)
+
+And calling `Prompter.trigger('prompt')` will generate the correct response:
+
+    > count: 99
+
+NOTE: did you encounter a _zombie_ event? Did the speak method fire twice, once with the old response and another with the correct one? More to come on this...
+
+Of course, this example is overly convoluted. We could have simply set the callback and triggers on the Speaker object. But don't think too hard. Not yet, at least.
+
+TODO: a brief description of context...
 
 For those who haven't experienced the fear and anxiety of JavaScript context, especially the `this` keyword, there'll be plenty more of context to come.
 
